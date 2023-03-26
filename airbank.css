@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+ body {
+    font-family: Roboto;
+}
+a {
+    color: white;
+}
+a:hover {
+    color: #99cc33;
+}
+.layoutCover {
+    position: relative;
+    /*  width: 1120px;
+  */
+    margin: 0 auto;
+}
+.ui-dialog {
+    background-color: #202224;
+}
+.ui-dialog-titlebar, .ui-dialog-title {
+    background: #2e3133;
+}
+/** encoded svg */
+ .layoutHeaderLogo {
+    background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOTciIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCAxNDAgNTYiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48cGF0aCBkPSJNNS43MyAxNC41NmEyLjc5IDIuNzkgMCAwIDAgMi44OCAyLjg4IDMuMzcgMy4zNyAwIDAgMCAyLjUyLTEuMTZjMS0xLjI4IDEuMTItMi44NCAxLjEyLTUtMy44LS4zMi02LjUyLjg4LTYuNTIgMy4yOHptNy4yNiA2LjI0YTE1LjczIDE1LjczIDAgMCAxLS4xOS0yLjc2IDYuNzIgNi43MiAwIDAgMS02IDMuMjRjLTIuOTIgMC00LjI0LS44NC01LTEuNmE2LjI2IDYuMjYgMCAwIDEtMS43Ni00LjQ0IDYuNzIgNi43MiAwIDAgMSA0LjI4LTYuMjhjMi40OS0xLjEyIDYtMS4xMiA4LTEuMTJhNy44OCA3Ljg4IDAgMCAwLS4yOC0yLjY4QTIuNzQgMi43NCAwIDAgMCA5LjQgMy40OCAyLjcgMi43IDAgMCAwIDcuMTYgNC42YTMgMyAwIDAgMC0uNDQgMS44SC45MkE1LjY1IDUuNjUgMCAwIDEgMy4yIDEuNjQgMTAuNTUgMTAuNTUgMCAwIDEgOS4zMiAwYzEuNjggMCA1LjIuMjggNy4yIDIuNmE4IDggMCAwIDEgMS40IDV2OC4xMmEyNC40NCAyNC40NCAwIDAgMCAuMzkgNS4xMmgtNS4yOGwtLjA0LS4wNHpNMjEuNzcuNTJoNS45MlYyMC44aC01LjkyVi41MnptMTUuNCAzLjg4TDM3LjA1LjUyaC01LjU2Yy4xMiAxLjE2LjI4IDQuMDguMjggNXYxNS4yOWg1Ljk2di0xMGMwLTIuNTIuMzYtNS42IDYuMzYtNVYuNDljLTQuOC0uMjQtNi4xMiAyLjItNi44OCAzLjkybC0uMDQtLjAxek02NC40IDIwLjYyYTYuODIgNi44MiAwIDAgMC01LjcyIDIuNzJ2LTguODZoLTUuOTV2MjYuNjNoNS43MmMuMTItMS4yNC4xNi0yLjExLjItMi43NWE2LjU3IDYuNTcgMCAwIDAgNi4wOCAzLjE1YzQgMCA4LjQ0LTIuNjQgOC40NC0xMC4yIDAtNi44LTMuODgtMTAuNjgtOC44LTEwLjY4bC4wMy0uMDF6bS0xLjM1IDE2Ljg5Yy0yLjY4IDAtNC42NC0yLjE2LTQuNjQtNi42NyAwLTEuMjUgMC02LjEyIDQuMzctNi4xMnM0LjM2IDUuMjIgNC4zNiA2Ljc4YzAgMSAwIDYtNC4wOCA2bC0uMDEuMDF6bTI5Ljk2LTkuNmE4IDggMCAwIDAtMS40LTVjLTItMi4zMi01LjUyLTIuNi03LjItMi42YTEwLjU1IDEwLjU1IDAgMCAwLTYuMTIgMS42NCA1LjY1IDUuNjUgMCAwIDAtMi4yOCA0Ljc2aDUuOGEzIDMgMCAwIDEgLjQ0LTEuOCAyLjcgMi43IDAgMCAxIDIuMjQtMS4xMiAyLjc0IDIuNzQgMCAwIDEgMi42NCAxLjY4Yy4yNDYuODcuMzQgMS43NzcuMjggMi42OC0yIDAtNS41MiAwLTggMS4xMmE2LjcyIDYuNzIgMCAwIDAtNC4yOCA2LjI4IDYuMjYgNi4yNiAwIDAgMCAxLjc2IDQuNDRjLjguNzYgMi4xMiAxLjYgNSAxLjZhNi43MyA2LjczIDAgMCAwIDYtMy4yNGMtLjAzLjkyMy4wMjQgMS44NDcuMTYgMi43Nmg1LjMxYTI0LjM5IDI0LjM5IDAgMCAxLS4zOS01LjEybC4wNC04LjA4em0tNi43MiA4LjcyYTMuMzUgMy4zNSAwIDAgMS0yLjUyIDEuMTYgMi43OSAyLjc5IDAgMCAxLTIuODgtMi44OGMwLTIuNCAyLjcyLTMuNiA2LjUyLTMuMjggMCAyLjE2LS4wOCAzLjcyLTEuMTIgNXptMjkuMDUtMTIuNDljLS41Mi0xLjQtMi4yLTMuOC02LjE2LTMuOGE3IDcgMCAwIDAtNi41NyAzLjUybC0uMTYtM2gtNS43MmMuMTIgMS40LjEyIDMuNi4xMiAzLjY4djE2LjU3aDZWMjkuNDRhNS41NSA1LjU1IDAgMCAxIC43Mi0zLjA4IDMuNjggMy42OCAwIDAgMSAzLjA4LTEuNTYgMy4wNyAzLjA3IDAgMCAxIDIuODggMS43MiA0Ljc2IDQuNzYgMCAwIDEgLjMyIDIuMnYxMi4zOWg2VjMwLjE4YzAtMy43Ni0uMTItNC44LS41Ni02bC4wNS0uMDR6IiBmaWxsPSIjZmZmZmZmIj48L3BhdGg+PHBhdGggZmlsbD0iIzlDMyIgZD0iTTUxLjEyLjUxTDI5Ljg1IDQxLjA4aDYuMTZMNTcuMjguNTFoLTYuMTYiPjwvcGF0aD48cGF0aCBmaWxsPSIjZmZmZmZmIiBkPSJNMTM4LjQ0IDIwLjgyaC02LjY5bC02LjA5IDguNFYxNC40aC01Ljg4djI2LjcxaDUuODhWMzAuMWw2LjI1IDExLjAxaDdsLTcuMzctMTEuNTIgNi45LTguNzdNMzQuMzEzIDUyLjk1MmwuMDA5LjAyN2MuMDExLjYtLjIgMS4xMDMtLjYzMyAxLjUwNy0uNDM0LjQwNC0xLjAwNi42MDYtMS43MTguNjA2LS43MjQgMC0xLjMxNC0uMjU2LTEuNzctLjc2OS0uNDU1LS41MTItLjY4Mi0xLjE2My0uNjgyLTEuOTV2LTEuMTRjMC0uNzg3LjIyNy0xLjQzOC42ODMtMS45NTIuNDU1LS41MTUgMS4wNDUtLjc3MiAxLjc2OS0uNzcyLjcyMyAwIDEuMjk5LjE5MyAxLjcyNy41NzguNDI3LjM4NS42MzUuODk2LjYyNCAxLjUzMmwtLjAwOS4wMjZoLS44M2MwLS40NDgtLjEzMi0uODAzLS4zOTYtMS4wNjMtLjI2NC0uMjYxLS42MzYtLjM5Mi0xLjExNi0uMzkyLS40ODQgMC0uODY5LjE5NS0xLjE1Ni41ODUtLjI4Ny4zOS0uNDMuODczLS40MyAxLjQ1djEuMTQ3YzAgLjU4My4xNDMgMS4wNy40MyAxLjQ2LjI4Ny4zODkuNjcyLjU4NCAxLjE1Ni41ODQuNDggMCAuODUyLS4xMyAxLjExNi0uMzkuMjY0LS4yNTkuMzk1LS42MTcuMzk1LTEuMDc0aC44MzF6bS0yLjMzOC01LjU5bC42NDYtLjY1aC43NDd2LjA3OWwtMS4xMyAxLjA3N2gtLjUyMkwzMC42IDQ2Ljh2LS4wODhoLjczbC42NDUuNjV6bTYuMzMxIDYuOTYxaDMuMDI4VjU1aC0zLjg5M3YtNi4zOThoLjg2NXY1LjcyMXptOS43NDItMi4yOWgtMi45MzF2Mi4yOWgzLjM4VjU1SDQ0LjI1di02LjM5OGg0LjE5N3YuNjhoLTMuMzMxdjIuMDdoMi45M3YuNjgyek01Ni4zIDU1aC0uODY2bC0zLjA4LTQuOTQ4LS4wMjcuMDA5VjU1aC0uODY2di02LjM5OGguODY2bDMuMDggNC45MzkuMDI3LS4wMDl2LTQuOTNoLjg2NlY1NXptMTEuMjAzLTEuNjEzYS45NS45NSAwIDAgMC0uMzMtLjczNmMtLjIxOS0uMTk4LS42MDktLjM2NC0xLjE2OC0uNDk5LS42NzctLjE2LTEuMjA1LS4zOTgtMS41ODQtLjcxMi0uMzgtLjMxMy0uNTctLjcwNy0uNTctMS4xODIgMC0uNDk4LjIwNS0uOTE0LjYxNC0xLjI0OC40MDgtLjMzNC45MzgtLjUgMS41ODgtLjUuNyAwIDEuMjU4LjE5MSAxLjY3Mi41NzUuNDE1LjM4NC42MTUuODMuNiAxLjMzNmwtLjAwOS4wMjZoLS44MjZjMC0uMzc1LS4xMjQtLjY3OC0uMzcxLS45MS0uMjQ4LS4yMy0uNjAzLS4zNDctMS4wNjYtLjM0Ny0uNDMgMC0uNzYuMDk4LS45OS4yOTNhLjk1Mi45NTIgMCAwIDAtLjM0Ni43NjJjMCAuMjc4LjEyNS41MS4zNzQuNjk3LjI0OS4xODYuNjUzLjM0OSAxLjIxMy40OS42NzQuMTY3IDEuMTg2LjQxMyAxLjUzOC43MzguMzUxLjMyNS41MjcuNzI4LjUyNyAxLjIwOCAwIC41MTYtLjIxLjkzLS42MzMgMS4yNDQtLjQyMi4zMTQtLjk3Mi40Ny0xLjY1Mi40N2EyLjg2OCAyLjg2OCAwIDAgMS0xLjY5NC0uNTE4Yy0uNDktLjM0Ni0uNzI5LS44MDktLjcxNC0xLjM4OWwuMDA5LS4wMjZoLjgyNmMwIC40MS4xNS43MjIuNDUyLjkzNi4zMDIuMjE0LjY3Ni4zMiAxLjEyMS4zMi40MzcgMCAuNzgyLS4wOTIgMS4wMzctLjI3NmEuODguODggMCAwIDAgLjM4Mi0uNzUyem01LjY5LTEuMjc0aC0uNzQ3VjU1aC0uODY2di02LjM5OGguODY2djIuODNoLjY2OGwyLjI5LTIuODNoLjk1OGwuMDEzLjAyMi0yLjQ4MyAzLjA3MSAyLjY2MyAzLjI4My0uMDEzLjAyMmgtMS4wMzNsLTIuMzE2LTIuODg3em0xMC44LTMuNTExdjQuMzM3YzAgLjY5Ny0uMjI2IDEuMjMtLjY3OCAxLjYtLjQ1My4zNjktMS4wNDQuNTUzLTEuNzczLjU1My0uNzA0IDAtMS4yNzQtLjE4NS0xLjcxMi0uNTU2LS40MzgtLjM3LS42NTctLjkwMy0uNjU3LTEuNTk3di00LjMzN2guODY2djQuMzM3YzAgLjQ4My4xMzcuODUuNDEzIDEuMS4yNzUuMjUxLjYzOC4zNzcgMS4wOS4zNzcuNDc0IDAgLjg1Ny0uMTI2IDEuMTQ5LS4zNzYuMjkxLS4yNS40MzctLjYxOC40MzctMS4xMDF2LTQuMzM3aC44NjZ6bTQuMjMyIDMuODMyVjU1aC0uODY2di02LjM5OGgyLjQ0OGMuNjgyIDAgMS4yMTIuMTc1IDEuNTkuNTI3LjM3OC4zNTEuNTY3LjgxNC41NjcgMS4zODkgMCAuNTgzLS4xODkgMS4wNDgtLjU2NyAxLjM5NS0uMzc4LjM0Ny0uOTA4LjUyLTEuNTkuNTJoLTEuNTgyem0wLS42NzdoMS41ODJjLjQzMyAwIC43NTctLjExNy45Ny0uMzUuMjE1LS4yMzIuMzIyLS41MjYuMzIyLS44OCAwLS4zNTUtLjEwOC0uNjUxLS4zMjMtLjg4OC0uMjE2LS4yMzgtLjUzOS0uMzU2LS45Ny0uMzU2aC0xLjU4MXYyLjQ3NHpNOTUuOTg4IDU1aC0uODd2LTYuMzk4aC44N1Y1NXptOC40MiAwaC0uODY2bC0zLjA4MS00Ljk0OC0uMDI2LjAwOVY1NWgtLjg2NnYtNi4zOThoLjg2NmwzLjA4IDQuOTM5LjAyNy0uMDA5di00LjkzaC44NjVWNTV6bTUuMzY0LTMuMTQ2bDEuNjctMy4yNTJoLjk4OGwtMi4yNDUgNC4xNDhWNTVoLS44NjF2LTIuMzA3bC0yLjIxLTQuMDkxaC45ODhsMS42NyAzLjI1MnptMTAuNTQuNThWNTVoLS44NjZ2LTYuMzk4aDIuNDQ4Yy42ODMgMCAxLjIxMy4xNzUgMS41OS41MjcuMzc5LjM1MS41NjguODE0LjU2OCAxLjM4OSAwIC41ODMtLjE5IDEuMDQ4LS41NjcgMS4zOTUtLjM3OC4zNDctLjkwOC41Mi0xLjU5MS41MmgtMS41ODJ6bTAtLjY3N2gxLjU4MmMuNDM0IDAgLjc1Ny0uMTE3Ljk3MS0uMzUuMjE0LS4yMzIuMzItLjUyNi4zMi0uODggMC0uMzU1LS4xMDctLjY1MS0uMzIyLS44ODgtLjIxNS0uMjM4LS41MzgtLjM1Ni0uOTctLjM1NmgtMS41ODF2Mi40NzR6bTcuNzE2LjY3N1Y1NWgtLjg2NnYtNi4zOThoMi40NDhjLjY4MiAwIDEuMjEyLjE3NSAxLjU5LjUyNy4zNzguMzUxLjU2Ny44MTQuNTY3IDEuMzg5IDAgLjU4My0uMTg5IDEuMDQ4LS41NjcgMS4zOTUtLjM3OC4zNDctLjkwOC41Mi0xLjU5LjUyaC0xLjU4MnptMC0uNjc3aDEuNTgyYy40MzMgMCAuNzU3LS4xMTcuOTctLjM1LjIxNS0uMjMyLjMyMi0uNTI2LjMyMi0uODggMC0uMzU1LS4xMDgtLjY1MS0uMzIzLS44ODgtLjIxNi0uMjM4LS41MzktLjM1Ni0uOTctLjM1NmgtMS41ODF2Mi40NzR6bTEwLjYzMy40MTNoLTIuOTE4VjU1aC0uODY2di02LjM5OGg0LjIzMnYuNjhoLTMuMzY2djIuMjA3aDIuOTE4di42OHoiPjwvcGF0aD48L2c+PC9zdmc+) no-repeat
+}
+body {
+    background-color: #202224;
+    color: #fff
+}
+.bodyWrapper {
+    background-color: transparent;
+    border-color: transparent;
+    padding: 0;
+}
+.mhtHPProduct {
+    border-radius: 10px;
+    border-color: transparent;
+    background-color: #2e3133;
+}
+.mhtLoanOfferBenefitInsTable .tableRow,
+.mhtLoanOfferCalculator .resultBox .calcResultNumItem,
+.uiBorTopLight,
+.mhtLoanOfferOverview .loanOfferTabMenu,
+.mhtLoanOfferOverview .loanOfferTabMenu .menuItem,
+.mhtLoanOfferOverview .buttonWrapper,
+.mhtHPMessages .mhtHeading,
+.mhtHPProductItem {
+    border-color: #414548;
+}
+.cmpLine, .cmpLineDark, .cmpLineLight, .cmpLineGreen {
+	background-color: #414548;
+}
+.mhtHPMessages {
+    background-color: #2e3133;
+}
+.mhtLoginCont .cmpLabel {
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+.swtCountdown {
+    background-color: #414548;
+    padding-top: 21px;
+}
+.swtCountdown p:not(.loader) {
+    font-size: 0.9rem;
+}
+.swtCountdown p {
+    font-size: 0.8rem;
+}
+.swtCountdown p.loader {
+    margin: 15px 15px 10px 0px;
+    border-color: transparent;
+    background: url(https://lilianalillyy.github.io/loader-slow.gif) no-repeat scroll -2px -2px;
+    background-size: 50px;
+}
+.bodyLogin .layoutInner {
+    border: none;
+    border-top-right-radius: 10px;
+    background-color: #414548;
+}
+.bodyLogin .layoutInner .mhtLoginInfo > h1 {
+    padding-top: 35px;
+}
+.bodyLogin .mhtLoginCont {
+    background-color: #2e3133;
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+.bodyLogin .mhtLoginTabs .mhtLoginText.active {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: #414548;
+    color: #fff;
+}
+.bodyLogin .mhtLoginTabs .mhtLoginText.active h1 {
+    border-bottom: 1px solid #61666b;
+}
+.bodyLogin .mhtLoginTabs .mhtLoginText.active a {
+    color: #99cc33;
+}
+.cmpLoginTabs {
+    background-color: #61666b;
+    border-color: transparent;
+}
+.cmpLoginTabs li {
+    border: none;
+    border-bottom: 2px solid #71787d;
+}
+.cmpLoginTabs li:first-child {
+    border-bottom-left-radius: 10px;
+}
+.cmpLoginTabs li:not(.active) {
+    border: none;
+    border-left: 1px solid #71787d !important;
+    margin: 0;
+}
+.cmpLoginTabs li.active {
+    background-color: #414548;
+    border-left: none;
+    height: inherit;
+    border-radius: inherit;
+    border-bottom: 2px solid #99cc33;
+}
+.cmpLoginTabs li:hover {
+    background-color: #414548;
+}
+.cmpLoginTabs li.active a {
+    padding-top: none;
+}
+.cmpLoginTabs li:first-child {
+    border-bottom-left-radius: 10px;
+}
+.mhtLoginCont {
+    /*display: flex;
+    */
+    justify-content: center;
+    align-items: center;
+}
+.mhtLoginCont .mhtLogin {
+    height: fit-content;
+    width: 100%;
+}
+.mhtLoginCont p {
+    margin-top: 0;
+}
+.mhtLoginCont #id48 {
+    text-align: center;
+}
+.mhtLoginCont #id48 b {
+    font-size: 0.9rem;
+}
+.mhtQRLoginWrapper {
+    margin-top: 16px;
+    background: transparent;
+    border-radius: 0;
+}
+.mhtLoginUser {
+    background-color: #414548;
+}
+.mhtQRLoginWrapper img {
+    border-radius: 10px;
+}
+.cmpButton40 .ui-button {
+    background: #99cc33;
+    border-radius: 9999px;
+    font-weight: 400;
+    transition: 200ms ease-in-out;
+}
+.cmpButton40 .ui-button:hover {
+    background: #7eac20
+}
+.cmpText.xlarge .cmpTextR, .cmpDate.xlarge .cmpTextR {
+    display: none;
+}
+.cmpButton a.ui-button {
+    color: white;
+}
+.mhtLoginCont #id23 {
+    /** hack for "margin" */
+    border-top: 10px solid transparent;
+}
+.mhtLoginCont #id23, .mhtLoginCont #id24 {
+    /** hack for "margin" */
+    border-bottom: 8px solid transparent;
+}
+.cmpButton a.ui-button .ui-button-text {
+    color: white;
+}
+.cmpTextIn {
+    margin-right: 0;
+    margin-top: 5px;
+    padding-top: 10px;
+    padding-right: 10px;
+}
+.cmpText.xlarge .cmpTextR, .cmpText.xlarge .cmpTextIn, .cmpDate.xlarge .cmpTextR, .cmpDate.xlarge .cmpTextIn {
+    background-image: none;
+    background-color: #fff;
+    border-radius: 9999px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.cmpBoxLightGray .cmpBoxInner, .cmpBoxLightGray .cmpBoxInnerRound {
+    background-color: #61666b;
+    border-color: #71787d;
+    border-radius: 10px;
+}
+.bodyLogin .layoutFooterCopy {
+    margin-top: 15px;
+    margin-right: 0;
+    color: #e6e8eb;
+    font-size: 0.8rem;
+}
+.cmpSwitch label::before {
+    box-shadow: 0 0 1px 1px #9c3;
+    background-color: #414548;
+}
+.cmpTextIn.size2, .cmpTextIn.size4 {
+    background-image: none;
+    background: none;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: none;
+    border: none;
+}
+.cmpTextIn.size2 {
+    width: 1.75em;
+}
+.layoutMainMenu > div .cmpButton .ui-button {
+    background: #2e3133;
+    border-color: #414548;
+}
+.layoutMainMenu > div {
+	border-radius: 9999px;
+}
+.cmpListPageButton.next {
+  background: url(https://lilianalillyy.github.io/chevron-right-solid.svg);
+  color: #fff;
+  background-size: 33%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.cmpListPageButton.prev {
+  background: url(https://lilianalillyy.github.io/chevron-left-solid.svg);
+  color: #fff;
+  background-size: 33%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.layoutMainMenu > div .cmpButton.first .ui-button {
+    -moz-border-radius: 9999px 0 0 9999px;
+    -webkit-border-radius: 9999px 0 0 9999px;
+    border-radius: 9999px 0 0 9999px;
+}
+.layoutMainMenu > div .cmpButton.last .ui-button {
+    -moz-border-radius: 0 9999px 9999px 0;
+    -webkit-border-radius: 0 9999px 9999px 0;
+    border-radius: 0 9999px 9999px 0;
+}
+.layoutMainMenu > div .cmpButton.selected .ui-button, .layoutMainMenu > div .cmpButton.selected .ui-button:hover {
+    background: #99cc33;
+    box-shadow: none;
+}
+/** nobody uses this shit anymore */
+.layoutPostIt,
+.layoutContext {
+	display: none;
+}
+.layoutMainMenu > div .cmpButton.selected .ui-button::after {
+    display: none;
+}
+.mhtLoanOfferBenefitInsTable .tableBasicRow {
+	border-color: transparent;
+}
+.mhtLoanOfferCalculator .resultBoxMortgage,
+.toggleDetail.openDetail,
+.mhtLoanOfferInsurance,
+.mhtLoanOfferCalculator .resultBox,
+.mhtInvestmentOffer,
+.mhtOverdraftInterestFreePromo,
+.cmpBoxGray2,
+.cmpListPageButton,
+.mhtSideInfo .cmpBoxInnerRound,
+.mhtTable.mhtPaymentGrid .wrapper, .mhtTable.mhtDocumentsGrid .wrapper, .mhtTable.mhtInvestmentsGrid .wrapper,
+.mhtPromoOffer .ban, .mhtPromoOffer .static-ib-banner {
+	background: #2e3133;
+    border-color: #414548 !important;
+    border-radius: 10px;
+}
+.mhtPromoOffer .ban:hover, .mhtPromoOffer .static-ib-banner:hover {
+	background: #414548;
+}
+.mhtPromoOffer.pos0 {
+  top: 0;
+}
+.cmpButton30 .ui-button, .cmpButton30 .ui-button-text {
+	background: #99cc33;
+    border-radius: 9999px;
+}
+.cmpButton30 .ui-button, .cmpButton30 .ui-button-text {
+	font-size: 1rem;
+    font-weight: 500;
+}
+.slider2 .mhtChartScrollBarHorizontal.gfx_new::after {
+	background: #414548;
+    background-clip: content-box;
+}
+.hPBox.gray, .sliderHeader, .slider2 .mhtChartScrollBarHorizontal.gfx_new .knob .knobtext {
+	background: #414548;
+  	color: #fff !important;
+  	border-color: #414548;
+  	border-radius: 10px;
+}
+.slider2 .mhtChartScrollBarHorizontal.gfx_new .knob .knobtext::after {
+	display: none;
+}
+.layoutNavSide .cmp2ndLevel.cmpButton.selected {
+	display: none;
+}
+.layoutContent {
+    padding: 10px
+}
+.mhtMenuAccount .tab {
+	background: #2e3133;
+    border-color: #2e3133;
+    border-radius: 10px;
+}
+.mhtMenuAccount .tab.selected {
+	background: #414548;
+}
+.mhtMenuAccount .name .fader,
+.mhtMenuAccount .selected .name .fader {
+	display: none !important;
+}
+.cmpIconAccountInfoWrapper {
+	background: transparent;
+}
+.uiW220 {
+	margin-right: 30px;
+}
+.cmpText.large input, .cmpDate.large .cmpText input {
+	height: inherit;
+}
+.cmpTextR {
+	display: none;
+}
+.mhtLoanOfferCalculator .sliderHeader .sliderHeaderLabel {
+	margin-left: 25px;
+}
