@@ -1,1 +1,1 @@
-import "./css/ib.scss";
+import "./css/ib.css";
