@@ -1,0 +1,12 @@
+{
+  "entrypoints": {
+    "ib": {
+      "css": [
+        "/ib.css"
+      ],
+      "js": [
+        "/ib.js"
+      ]
+    }
+  }
+}
