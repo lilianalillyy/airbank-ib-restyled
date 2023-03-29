@@ -1,8 +1,10 @@
 const Encore = require('@symfony/webpack-encore');
 
 Encore
-    .setOutputPath('/dist')
+    .disableSingleRuntimeChunk()
+    .setOutputPath('dist')
     .setPublicPath('/')
-    .addEntry('ib', './js/index.js')
+    .addEntry('ib', './src/index.js')
     .enableSassLoader()
-    .cleanupOutputBeforeBuild()
+
+module.exports = Encore.getWebpackConfig();

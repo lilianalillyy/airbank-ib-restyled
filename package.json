@@ -6,9 +6,16 @@
   "author": "Liliana V. <lilianalillyy@gmail.com>",
   "license": "MIT",
   "private": true,
+  "scripts": {
+    "build": "encore prod"
+  },
   "devDependencies": {
     "@babel/core": "^7.21.3",
+    "@babel/preset-env": "^7.20.2",
     "@symfony/webpack-encore": "^4.2.0",
-    "sass": "^1.60.0"
+    "sass": "^1.60.0",
+    "sass-loader": "^13.2.2",
+    "webpack": "^5.76.3",
+    "webpack-cli": "^5.0.1"
   }
 }
