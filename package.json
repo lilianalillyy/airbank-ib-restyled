@@ -1,0 +1,14 @@
+{
+  "name": "@liliana/airbank-ib-restyled",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "repository": "git@github.com:lilianalillyy/airbank-ib-restyled.git",
+  "author": "Liliana V. <lilianalillyy@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "@babel/core": "^7.21.3",
+    "@symfony/webpack-encore": "^4.2.0",
+    "sass": "^1.60.0"
+  }
+}
